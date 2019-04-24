@@ -53,7 +53,7 @@ docker run -it --name app2 -p 8090:8080 statistic-service
 ```
 
 #### App 2
-> POST http://localhost:8081/transactions
+> POST http://localhost:8090/transactions
 ```
 {
   "amount": 7349.55,
@@ -61,7 +61,7 @@ docker run -it --name app2 -p 8090:8080 statistic-service
 }
 ```
 
-> GET http://localhost:8081/statistics
+> GET http://localhost:8090/statistics
 ```
 {
     "maximum": 7349.55,

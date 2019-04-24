@@ -12,7 +12,8 @@ EXPOSE 8080:8080
 ENTRYPOINT ["java", "-jar", "trabalho_final.jar"]
 ```
 
-### BUILD
+### Build
+Montando a imagem do docker (*precisa gerar o jar primeiro!*)
 ```
 docker build -f Dockerfile -t statistic-service .
 ```
@@ -26,7 +27,7 @@ docker run -it --name app1 -p 8080:8080 statistic-service
 
 #### App 2
 ```
-docker run -it --name app2 -p 8080:8080 statistic-service
+docker run -it --name app2 -p 8090:8080 statistic-service
 ```
 
 ## Endpoints
@@ -41,6 +42,15 @@ docker run -it --name app2 -p 8080:8080 statistic-service
 ```
 
 > GET http://localhost:8080/
+```
+{
+    "maximum": 358.75,
+    "minimum": 358.75,
+    "counter": 1,
+    "sum": 358.75,
+    "avger": 358.75
+}
+```
 
 #### App 2
 > POST http://localhost:8081/transactions
@@ -52,3 +62,12 @@ docker run -it --name app2 -p 8080:8080 statistic-service
 ```
 
 > GET http://localhost:8081/statistics
+```
+{
+    "maximum": 7349.55,
+    "minimum": 7349.55,
+    "counter": 1,
+    "sum": 7349.55,
+    "avger": 7349.55
+}
+```

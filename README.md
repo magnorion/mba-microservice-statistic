@@ -41,7 +41,7 @@ docker run -it --name app2 -p 8090:8080 statistic-service
 }
 ```
 
-> GET http://localhost:8080/
+> GET http://localhost:8080/statistics
 ```
 {
     "maximum": 358.75,

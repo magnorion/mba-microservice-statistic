@@ -16,13 +16,13 @@ public class AllTransactionDao {
 
         allTransaction.setSum(result.stream()
                 .mapToDouble(NewTransaction::getAmount).sum());
-        allTransaction.setAvger(result.stream()
+        allTransaction.setAvg(result.stream()
                 .mapToDouble(NewTransaction::getAmount).average().getAsDouble());
-        allTransaction.setMinimum(result.stream()
+        allTransaction.setMin(result.stream()
                 .mapToDouble(NewTransaction::getAmount).min().getAsDouble());
-        allTransaction.setMaximum(result.stream()
+        allTransaction.setMax(result.stream()
                 .mapToDouble(NewTransaction::getAmount).max().getAsDouble());
-        allTransaction.setCounter(result.size());
+        allTransaction.setCount(result.size());
 
         return allTransaction;
     }

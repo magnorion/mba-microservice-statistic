@@ -7,9 +7,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AllTransaction {
-    private double maximum;
-    private double minimum;
-    private long counter;
     private double sum;
-    private double avger;
+    private double min;
+    private double max;
+    private double avg;
+    private long count;
 }
